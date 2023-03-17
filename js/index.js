@@ -61,21 +61,19 @@ function playGenerate(e){
         const square = generateSquare(i, squareRow)
         squareGrid.appendChild(square);
         square.addEventListener("click", function(){
-            let bombsCheck;
-            for(let i = 0; i < bombs.length; i++){
-                bombsCheck = bombs[i];
-                if(i === bombsCheck){
+            let bombsCheck = false; 
+            for(let j = 1; j <= bombs.length -1 ; j++){
+                if(i === bombs[j]){
                       bombsCheck = true;
-                    }
-                    bombsCheck = false;
+                    }     
             }
-            if(bombsCheck){
-                console.log("è vero")
-                console.log(i)
+            if(!bombsCheck){
+                square.classList.add("safe");
             } else{
-                console.log("è falso")
-                console.log(i)
+                square.classList.add("death");
             }
+
+            
             
             
         })
