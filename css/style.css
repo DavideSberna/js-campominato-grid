@@ -25,7 +25,6 @@ main{
 #play-grid{
     width: 500px;
     height: 500px;
-    border: solid 1px white;
     display: flex;
     flex-flow: row wrap;
 }
@@ -36,10 +35,43 @@ main{
     align-items: center;
 }
 .safe{
-    background-color: blue;
+    background-color: rgb(6, 100, 162);
     color: white;
 }
 .death{
     background-color: rgb(255, 60, 11);
     color: white;
+}
+
+.w-px{
+    width: 300px;
+
+}
+
+.w-px ul li{
+    list-style: none;
+    text-align: left;
+    padding: 0 10px;
+}
+
+#icon-nocheck, #icon-check{
+    font-size: 50px;
+    position: absolute;
+    left: calc(50% - 25px);
+    top: -40px;
+}
+.CM-absolute{
+    position: absolute;
+    top: -1000px;
+    transition: 0.5s;
+    /* top: -120px; */
+}
+.pop-up-active{
+    top: -120px;
+}
+.CM-display{
+    display: block !important;
+}
+.btn-click{
+    
 }
